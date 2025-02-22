@@ -6,9 +6,9 @@ const NotesList = () => {
   const { Notes, deleteNote, downloadNote, setselectedNote } =
     useContext(NoteContext);
   return (
-    <>
+    <div className="w-full h-screen mt-20">
       {/* Task section heading */}
-      <h1 className="text-4xl text-center font-bold py-10 mt-10">Your Notes</h1>
+      <h1 className="text-4xl max-lg:text-3xl text-center font-bold mb-5">Your Notes</h1>
       {Notes.length === 0 ? (
         <div className="text-center lg:test-start min-h-80 ">
           No notes found !
@@ -31,7 +31,7 @@ const NotesList = () => {
           })}
         </ul>
       )}
-    </>
+    </div>
   );
 };
 
